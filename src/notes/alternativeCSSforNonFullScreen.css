@@ -1,0 +1,42 @@
+/* alternative css ideas to have the text not appear full screen */
+
+#codeInput, #codeOutput
+{
+    font-family: monospace;
+    font-size: 24px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 10px;
+    border: 1px solid gray;
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+#codeInput
+{
+    background: transparent;
+    color: transparent; /* hide text to avoid duplication */
+    caret-color: white; /* make sure cursor is visible */
+    position: absolute;
+    z-index: 1;
+    resize: none;
+}
+
+#codeOutput
+{
+    background: black;
+    position: relative;
+    z-index: 0;
+    pointer-events: none; /* prevent interaction */
+}
+
+/* ---- */
+
+/* Dedicated to God the Father */
+/* All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 */
+/* https://github.com/ChristopherTopalian */
+/* https://github.com/ChristopherAndrewTopalian */
+/* https://sites.google.com/view/CollegeOfScripting */
+

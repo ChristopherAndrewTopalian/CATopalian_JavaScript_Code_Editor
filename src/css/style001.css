@@ -1,0 +1,94 @@
+/* style001.css */
+
+body
+{
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial;
+    color: white;
+}
+
+#editorContainer
+{
+    height: 300px;
+}
+
+#codeInput, #codeOutput
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    resize: none;
+    tab-size: 4;
+    overflow-y: scroll;
+}
+
+#codeInput
+{
+    background-color: rgba(0, 0, 0, 0);
+    /* hide text in textarea */
+    color: transparent;
+    caret-color: white;
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+#codeOutput
+{
+    /* if font size increaes, decrease top pos corrospondingly */
+    top: -22px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    white-space: pre-wrap;
+    word-break: break-word;
+    /* make div not selectable */
+    pointer-events: none;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.pink
+{
+    color: pink;
+}
+
+.skyblue
+{
+    color: skyblue;
+}
+
+.yellow
+{
+    color: yellow;
+}
+
+.lightGray
+{
+    color: rgb(200, 200, 200);
+}
+
+.magenta
+{
+    color: rgb(255, 138, 255);
+}
+
+.objects
+{
+    color: rgb(155, 195, 255);
+}
+
+/* ---- */
+
+/* Dedicated to God the Father */
+/* All Rights Reserved Christopher Andrew Topalian Copyright 2000-2025 */
+/* https://github.com/ChristopherTopalian */
+/* https://github.com/ChristopherAndrewTopalian */
+/* https://sites.google.com/view/CollegeOfScripting */
+
