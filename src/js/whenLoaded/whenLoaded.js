@@ -6,6 +6,8 @@ function whenLoaded()
 
     let codeInput = ge('codeInput');
 
+    codeInput.value = 'Type Here';
+
     let codeOutput = ge('codeOutput');
 
     codeInput.addEventListener('input', highlightCode);
