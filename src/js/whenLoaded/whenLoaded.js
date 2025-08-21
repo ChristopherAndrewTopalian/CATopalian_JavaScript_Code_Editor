@@ -8,6 +8,8 @@ function whenLoaded()
 
     codeInput.value = 'Type Here';
 
+    codeInput.focus();
+
     let codeOutput = ge('codeOutput');
 
     codeInput.addEventListener('input', highlightCode);
