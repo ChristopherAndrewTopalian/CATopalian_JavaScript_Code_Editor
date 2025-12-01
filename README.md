@@ -5,8 +5,6 @@ USE APP: https://christopherandrewtopalian.github.io/CATopalian_JavaScript_Code_
 
 ![screenshot_001](src/media/textures/screenshots/001.JPG)  
 
-Issues: The current version colors the text very well, but needs mouse arrow position adjusting once the page is scrolled down further than one page.  
-
 ---
 
 CODE: https://github.com/ChristopherAndrewTopalian/CATopalian_JavaScript_Code_Editor

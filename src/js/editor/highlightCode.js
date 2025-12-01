@@ -5,33 +5,37 @@ function highlightCode()
     let code = escapeHtml(codeInput.value);
 
     let functionPattern = new RegExp(`\\b(${theFunctions.join('|')})\\b`, 'g');
-
     let eventPattern = new RegExp(`\\b(${theEvents.join('|')})\\b`, 'g');
-
     let objectPattern = new RegExp(`\\b(${theObjects.join('|')})\\b`, 'g');
 
     let highlightedCode = code.replace(functionPattern, '<span style="color: yellow;">$1</span>')
+        // events
+        .replace(eventPattern, '<span class="flowControl">$1</span>')
 
-    // events
-    .replace(eventPattern, '<span class="flowControl">$1</span>')
+         // objects
+        .replace(objectPattern, '<span class="objects">$1</span>')
 
-    // objects
-    .replace(objectPattern, '<span class="objects">$1</span>')
+         // function
+        .replace(/\bfunction\b/g, '<span class="pink">function</span>')
 
-    // function
-    .replace(/\bfunction\b/g, '<span class="pink">function</span>')
+         // let
+        .replace(/\blet\b/g, '<span class="pink">let</span>')
 
-    // let
-    .replace(/\blet\b/g, '<span class="pink">let</span>')
+         // new
+        .replace(/\bnew\b/g, '<span class="pink">new</span>')
 
-    // new
-    .replace(/\bnew\b/g, '<span class="pink">new</span>')
+         // digits
+        .replace(/\d/g, '<span class="lightGray">$&</span>')
 
-    // digits
-    .replace(/\d/g, '<span class="lightGray">$&</span>')
+         // flow control
+        .replace(/\b(if|else|do|while|for|forEach|break|continue)\b/g, '<span class="magenta">$1</span>');
 
-    // flowControl
-    .replace(/\b(if|else|do|while|for|forEach|break|continue)\b/g, '<span class="magenta">$1</span>');
+    // If the code ends in a newline, we must add a break tag 
+    // or the 'pre' element height will be 1 line too short.
+    if (code.endsWith("\n"))
+    {
+        highlightedCode += "<br>";
+    }
 
     codeOutput.innerHTML = highlightedCode;
 }
